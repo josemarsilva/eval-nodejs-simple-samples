@@ -81,6 +81,25 @@ http.createServer(function(req,res){
 
 ```
 
+### 3.2.3. Entendendo escopo global de variáveis
+
+* Edit `example-scope-global-local.js`
+
+```cmd
+var a = 10; // declare a global scope
+function inc() {
+    a+=1;   // increment. Este escopo acessa variável do escopo "de fora"
+    b = 11; // declare b. Quando se omite "var" o escopo não é travado,
+            // implicitamente vira "escopo global"
+    var c = 3; // declare c escopo "local". Existe somente enquanto
+               // function inc() existir
+}
+inc();
+console.log(a, b);
+// console.log(c); // ReferenceError: c is not defined
+``` 
+
+
 ### 3.3. Guia para Configuração ###
 
 ### 3.3.1. Instalação de pacotes e dependências ###
@@ -136,6 +155,22 @@ b. Abrir a página do servidor/porta pelo browser
 |  Wellcome! Your HTTP server captured your request, read content of file and output as result! |
 +---------------------------------------------------------------------------------------------------+
 ```
+
+### 3.5.3. Teste 3: Exemplo de escopo - Global Scope, Var, Var ommited, etc
+
+```cmd
+C:\...\eval-nodejs-simple-samples>node example-scope-global-local.js
+```
+
+* Observe que variável `b` foi criada no escopo global
+
+```console
+11 11
+```
+
+* Se remover o comentário `//` da linha `console.log(c);` haverá um erro de  de execução `ReferenceError: c is not defined`  porque a variável não existe mais. 
+
+
 
 ### 3.6. Guia para Execução ###
 
