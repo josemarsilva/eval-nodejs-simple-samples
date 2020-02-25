@@ -99,6 +99,31 @@ console.log(a, b);
 // console.log(c); // ReferenceError: c is not defined
 ``` 
 
+### 3.2.4. Entendendo Self Invoking Function
+
+* Vantagem de não sujar o escopo global
+* Edit `example-self-invoking-function.js`
+
+```cmd
+(function(){
+    console.log('Example of Self invoking function');
+})();
+``` 
+
+### 3.2.5. Entendendo Variável como Função e Exemplo de Singleton
+
+* Edit ``example-variable-as-function-singleton.js``
+
+```cmd
+var conta = (function(){
+    var contador = 0;
+    return function(){ contador++; console.log(contador)}
+})();
+
+conta();
+conta();
+conta();
+``` 
 
 ### 3.3. Guia para Configuração ###
 
@@ -169,6 +194,27 @@ C:\...\eval-nodejs-simple-samples>node example-scope-global-local.js
 ```
 
 * Se remover o comentário `//` da linha `console.log(c);` haverá um erro de  de execução `ReferenceError: c is not defined`  porque a variável não existe mais. 
+
+
+### 3.5.4. Teste 4: Exemplo de Self Invoking Function
+
+```cmd
+C:\...\eval-nodejs-simple-samples>node example-self-invoking-function.js
+```
+
+### 3.5.5. Teste 5: Exemplo de variável como Função e Exemplo de Singleton
+
+```cmd
+C:\...\eval-nodejs-simple-samples>node example-variable-as-function-singleton.js
+```
+
+* Observe que o valor da variável `contador` no escopo da função dentro da variável `conta` foi preservado. A referência a `contador` busca no escopo pai a mesma variável, por isto é possível incrementá-la.
+
+```console
+1
+2
+3
+```
 
 
 
