@@ -1,1 +1,1 @@
-example-variable-class-method.js
+var classe_contador = 

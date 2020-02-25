@@ -125,6 +125,13 @@ conta();
 conta();
 ``` 
 
+### 3.2.6. Simulando uma classe com metodos em uma variável
+
+* Edit `example-variable-class-method.js`
+
+```cmd
+``` 
+
 ### 3.3. Guia para Configuração ###
 
 * n/a
@@ -209,6 +216,11 @@ C:\...\eval-nodejs-simple-samples>node example-variable-as-function-singleton.js
 3
 ```
 
+### 3.5.6. Teste 6: Simulando uma classe com metodos em uma variável
+
+```cmd
+C:\...\eval-nodejs-simple-samples>node example-variable-class-method.js
+```
 
 
 ### 3.6. Guia para Execução ###
