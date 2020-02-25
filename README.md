@@ -127,14 +127,7 @@ conta();
 
 ### 3.3. Guia para Configuração ###
 
-### 3.3.1. Instalação de pacotes e dependências ###
-
-a. Instalação do json-server
-
-```cmd
-C:\...\eval-nodejs-simple-samples> npm install -g json-server
-```
-
+* n/a
 
 ### 3.4. Guia para Implantação ###
 
