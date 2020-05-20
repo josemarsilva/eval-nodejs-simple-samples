@@ -2,8 +2,15 @@
 
 ## 1. Introdução
 
-Este repositório contém os artefatos do projeto **eval-nodejs-simple-samples**, um servidor para responder a chamadas HTTP.
+Este repositório contém os artefatos do projeto **eval-nodejs-simple-samples**. São diversos programas, conceitos, bibliotecas, funcionalidades a saber:
 
+* [Criando uma aplicação NodeJS de servidor HTTP Simples](#321-criando-uma-aplicação-nodejs-de-servidor-http-simples)
+* [Criando a aplicação NodeJS do servidor HTTP Simples a partir de uma arquivo](#322-criando-a-aplicação-nodejs-do-servidor-http-simples-a-partir-de-uma-arquivo)
+* [Entendendo Escopo Global de Variáveis](323-entendendo-escopo-global-de-variáveis)
+* [Entendendo Self Invoking Function](324-entendendo-self-invoking-function)
+* [Entendendo escopo global de variáveis](#324-entendendo-self-invoking-function)
+* [Entendendo Variável como Função e Exemplo de Singleton](#325-entendendo-variável-como-função-e-exemplo-de-singleton)
+* [Simulando uma classe com metodos em uma variável](#326-simulando-uma-classe-com-metodos-em-uma-variável)
 
 ### 2. Documentação
 
@@ -43,7 +50,7 @@ C:\...\eval-nodejs-simple-samples> npm -v
 * Clone o projeto usando `git clone`. Use a _branch_ `master` se a _branch_ `develop` não estiver disponível
 * Faça suas alterações na _branch_ `develop` quando disponível. Peça permissão de escrita caso falte.
 
-### 3.2.1. Criando a aplicação NodeJS do servidor HTTP Simples
+### 3.2.1. Criando uma aplicação NodeJS de servidor HTTP Simples
 
 * edit `simple-http-server.js`
 
@@ -54,6 +61,9 @@ http.createServer(function(req,res){
     res.end('Hello Simple HTTP Server');
 }).listen(3000);
 ``` 
+
+* [NodeJS Primeiros Passos: Servidor HTTP Básico](https://www.youtube.com/watch?v=5L5-EoJbMfY)
+
 
 ### 3.2.2. Criando a aplicação NodeJS do servidor HTTP Simples a partir de uma arquivo
 
@@ -78,8 +88,10 @@ http.createServer(function(req,res){
         Wellcome! Your HTTP server captured your request, read content of file and output as result!
     </body>
 </html>
-
 ```
+
+* [NodeJS Primeiros Passos: Servidor HTTP Básico](https://www.youtube.com/watch?v=5L5-EoJbMfY)
+
 
 ### 3.2.3. Entendendo escopo global de variáveis
 
@@ -99,6 +111,8 @@ console.log(a, b);
 // console.log(c); // ReferenceError: c is not defined
 ``` 
 
+* [NodeJS Primeiros Passos: Escopo e Closures](https://www.youtube.com/watch?v=Xexyc2J-Di0)
+
 ### 3.2.4. Entendendo Self Invoking Function
 
 * Vantagem de não sujar o escopo global
@@ -109,6 +123,8 @@ console.log(a, b);
     console.log('Example of Self invoking function');
 })();
 ``` 
+
+* [NodeJS Primeiros Passos: Escopo e Closures](https://www.youtube.com/watch?v=Xexyc2J-Di0)
 
 ### 3.2.5. Entendendo Variável como Função e Exemplo de Singleton
 
@@ -125,12 +141,12 @@ conta();
 conta();
 ``` 
 
-### 3.2.6. Simulando uma classe com metodos em uma variável
+* [NodeJS Primeiros Passos: Escopo e Closures](https://www.youtube.com/watch?v=Xexyc2J-Di0)
 
-* Edit `example-variable-class-method.js`
+### 3.2.6. Organizando arquivos em módulos
 
-```cmd
-``` 
+* [NodeJS Primeiros Passos: Módulos](https://www.youtube.com/watch?v=9yX4ifWa0YU)
+
 
 ### 3.3. Guia para Configuração ###
 
@@ -236,6 +252,4 @@ C:\...\eval-nodejs-simple-samples>node example-variable-class-method.js
 
 ## Referências ##
 
-* [NodeJS Primeiros Passos: Servidor HTTP Básico](https://www.youtube.com/watch?v=5L5-EoJbMfY)
-* [NodeJS Primeiros Passos: Closures e Escopos](https://www.youtube.com/watch?v=Xexyc2J-Di0)
-* [Node.js - Documentation - HTTP module](https://nodejs.org/api/http.html)
+* [NodeJS - Documentation - HTTP module](https://nodejs.org/api/http.html)
